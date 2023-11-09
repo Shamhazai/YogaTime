@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Api", "YogaTime.Api.csproj", "{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Context", "..\YogaTime.Context\YogaTime.Context.csproj", "{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Context.Contracts", "..\YogaTime.Context.Contracts\YogaTime.Context.Contracts.csproj", "{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Repositories.Contracts", "..\YogaTime.Repositories.Contracts\YogaTime.Repositories.Contracts.csproj", "{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Repositories", "..\YogaTime.Repositories\YogaTime.Repositories.csproj", "{47823B69-B0F2-446B-8FB3-A14E85E7139B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Service", "..\YogaTime.Service\YogaTime.Service.csproj", "{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Service.Contracts", "..\YogaTime.Service.Contracts\YogaTime.Service.Contracts.csproj", "{3B1178B1-5477-466B-BDFB-C30EDFAC219A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47823B69-B0F2-446B-8FB3-A14E85E7139B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47823B69-B0F2-446B-8FB3-A14E85E7139B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47823B69-B0F2-446B-8FB3-A14E85E7139B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47823B69-B0F2-446B-8FB3-A14E85E7139B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8681C6BC-509A-4EBE-9740-54AB0A27B2B7}
+	EndGlobalSection
+EndGlobal
