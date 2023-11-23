@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common
+﻿namespace YogaTime.Common
 {
-    internal class IDateTimeProvider
+    /// <summary>
+    /// Интерфейс получения даты
+    /// </summary>
+    public interface IDateTimeProvider
     {
+        /// <summary>
+        /// Текущий момент (utc)
+        /// </summary>
+        DateTimeOffset UtcNow { get; }
     }
 }

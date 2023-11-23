@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace YogaTime.Common
 {
-    internal class ServiceCollectionExtensions
+    public static class ServiceCollectionExtensions
     {
+        public static void RegisterModule<TModule>(this IServiceCollection services) where TModule : Module
+        {
+            var type = typeof(TModule);
+            var instance = Activator.CreateInstance(type) as Module;
+            instance?.CreateModule(services);
+        }
     }
 }

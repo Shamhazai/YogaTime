@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TimeTable203.Common.Entity.EntityInterface;
 
 namespace TimeTable203.Common.Entity.InterfaceDB
 {
-    internal class IDbWriter
+    /// <summary>
+    /// Интерфейс создания и модификации записей в хранилище
+    /// </summary>
+    public interface IDbWriter
     {
+        /// <summary>
+        /// Добавить новую запись
+        /// </summary>
+        void Add<TEntity>(TEntity entity) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// Изменить запись
+        /// </summary>
+        void Update<TEntity>(TEntity entity) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// Удалить запись
+        /// </summary>
+        void Delete<TEntity>(TEntity entity) where TEntity : class, IEntity;
     }
 }

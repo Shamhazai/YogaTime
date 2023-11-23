@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TimeTable203.Common.Entity.EntityInterface
+﻿namespace TimeTable203.Common.Entity.EntityInterface
 {
-    internal class IEntityAuditCreated
+    /// <summary>
+    /// Аудит создания сущности
+    /// </summary>
+    public interface IEntityAuditCreated
     {
+        /// <summary>
+        /// Дата создания
+        /// </summary>
+        public DateTimeOffset CreatedAt { get; set; }
+
+        /// <summary>
+        /// Кто создал
+        /// </summary>
+        public string CreatedBy { get; set; }
     }
 }

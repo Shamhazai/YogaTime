@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TimeTable203.Common.Entity.InterfaceDB
+﻿namespace TimeTable203.Common.Entity.InterfaceDB
 {
-    internal class IUnitOfWork
+    /// <summary>
+    /// Определяет интерфейс для Unit of Work
+    /// </summary>
+    public interface IUnitOfWork
     {
+        /// <summary>
+        /// Асинхронно сохраняет все изменения в бд
+        /// </summary>
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

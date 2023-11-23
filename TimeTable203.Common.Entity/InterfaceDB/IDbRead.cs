@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TimeTable203.Common.Entity.EntityInterface;
 
 namespace TimeTable203.Common.Entity.InterfaceDB
 {
-    internal class IDbRead
+    /// <summary>
+    /// Интерфейс получения записей из бд
+    /// </summary>
+    public interface IDbRead
     {
+        /// <summary>
+        /// Предоставляет функциональные возможности для выполнения запросов
+        /// </summary> 
+        IQueryable<TEntity> Read<TEntity>() where TEntity : class, IEntity;
     }
 }
