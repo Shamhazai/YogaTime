@@ -20,5 +20,14 @@
         /// </summary>
         public string? Description { get; set; }
 
+        /// <summary>
+        /// нужна для связи один ко многим по вторичному ключу <see cref="TimeTableItem"/>
+        /// </summary>
+        public ICollection<TimeTableItem> TimeTableItem { get; set; }
+
+        /// <summary>
+        /// нужна для связи один ко многим по вторичному ключу <see cref="Studio"/>
+        /// </summary>
+        public ICollection<Studio> Studio { get; set; }
     }
 }

@@ -31,5 +31,17 @@
         public string Phone { get; set; } = string.Empty;
 
         public Guid  GroupId { get; set; }
+
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public Group Group { get; set; }
+
+
+        /// <summary>
+        /// нужна для связи один ко многим по вторичному ключу <see cref="Employee"/>
+        /// </summary>
+        public ICollection<Employee> Employee { get; set; }
+
     }
 }

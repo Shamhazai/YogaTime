@@ -17,7 +17,12 @@ namespace YogaTime.Context.Contracts.Models
         /// Описание
         /// </summary>
         public string? Description { get; set; }
-
         
+        public Guid GroupId { get; set; }
+
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public Group Group { get; set; }
     }
 }

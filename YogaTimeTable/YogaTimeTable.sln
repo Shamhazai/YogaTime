@@ -5,17 +5,25 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Api", "YogaTime.Api.csproj", "{1F85F545-F5CE-4E79-93FA-9DBFA6F73FAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Context", "..\YogaTime.Context\YogaTime.Context.csproj", "{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Context", "..\YogaTime.Context\YogaTime.Context.csproj", "{65029A8E-5293-4BE6-9E0E-412F22F7AE7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Context.Contracts", "..\YogaTime.Context.Contracts\YogaTime.Context.Contracts.csproj", "{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Context.Contracts", "..\YogaTime.Context.Contracts\YogaTime.Context.Contracts.csproj", "{A9A2FE48-6D69-4CCB-9F54-DDECC80E5098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Repositories.Contracts", "..\YogaTime.Repositories.Contracts\YogaTime.Repositories.Contracts.csproj", "{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Repositories.Contracts", "..\YogaTime.Repositories.Contracts\YogaTime.Repositories.Contracts.csproj", "{77AC1F3D-FD55-42E6-98A8-3AE98DCE4E8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Repositories", "..\YogaTime.Repositories\YogaTime.Repositories.csproj", "{47823B69-B0F2-446B-8FB3-A14E85E7139B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Repositories", "..\YogaTime.Repositories\YogaTime.Repositories.csproj", "{47823B69-B0F2-446B-8FB3-A14E85E7139B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Service", "..\YogaTime.Service\YogaTime.Service.csproj", "{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Service", "..\YogaTime.Service\YogaTime.Service.csproj", "{C295DE43-0501-4B5A-8CF0-9A05C03D8A9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Service.Contracts", "..\YogaTime.Service.Contracts\YogaTime.Service.Contracts.csproj", "{3B1178B1-5477-466B-BDFB-C30EDFAC219A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YogaTime.Service.Contracts", "..\YogaTime.Service.Contracts\YogaTime.Service.Contracts.csproj", "{3B1178B1-5477-466B-BDFB-C30EDFAC219A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Common", "..\Common\YogaTime.Common.csproj", "{6CB30D2E-50E6-4262-9F0A-21F0B29DDB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable203.Common.Entity", "..\TimeTable203.Common.Entity\TimeTable203.Common.Entity.csproj", "{9AF0A0AC-80DC-497A-844D-6462A03B2698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Shared", "..\YogaTime.Shared\YogaTime.Shared.csproj", "{5C60345A-B726-44A3-8B8E-849936FC4E7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaTime.Context.Configuration", "..\YogaTime.Context.Configuration\YogaTime.Context.Configuration.csproj", "{4AE32D3E-1EB0-43C3-A191-F8570CCB14C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +59,22 @@ Global
 		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B1178B1-5477-466B-BDFB-C30EDFAC219A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB30D2E-50E6-4262-9F0A-21F0B29DDB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB30D2E-50E6-4262-9F0A-21F0B29DDB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB30D2E-50E6-4262-9F0A-21F0B29DDB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB30D2E-50E6-4262-9F0A-21F0B29DDB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF0A0AC-80DC-497A-844D-6462A03B2698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF0A0AC-80DC-497A-844D-6462A03B2698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF0A0AC-80DC-497A-844D-6462A03B2698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF0A0AC-80DC-497A-844D-6462A03B2698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C60345A-B726-44A3-8B8E-849936FC4E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C60345A-B726-44A3-8B8E-849936FC4E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C60345A-B726-44A3-8B8E-849936FC4E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C60345A-B726-44A3-8B8E-849936FC4E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE32D3E-1EB0-43C3-A191-F8570CCB14C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE32D3E-1EB0-43C3-A191-F8570CCB14C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE32D3E-1EB0-43C3-A191-F8570CCB14C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE32D3E-1EB0-43C3-A191-F8570CCB14C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
