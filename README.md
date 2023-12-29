@@ -70,8 +70,7 @@ erDiagram
         string UpdatedBy
         DateTimeOffset DeleteddAt
   }
-
-'''
+```
 
 Скрипт для заполнения БД:
 
