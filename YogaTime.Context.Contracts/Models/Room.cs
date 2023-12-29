@@ -1,15 +1,10 @@
 ﻿namespace YogaTime.Context.Contracts.Models
 {
     /// <summary>
-    /// Зал
+    /// Занятие
     /// </summary>
     public class Room : BaseAuditEntity
     {
-        /// <summary>
-        /// Наименование
-        /// </summary>
-        public int Number { get; set; } 
-
         /// <summary>
         /// Наименование
         /// </summary>
@@ -20,5 +15,9 @@
         /// </summary>
         public string? Description { get; set; }
 
+        /// <summary>
+        /// нужна для связи один ко многим по вторичному ключу <see cref="TimeTableItem"/>
+        /// </summary>
+        public ICollection<TimeTableItem> TimeTableItem { get; set; }
     }
 }

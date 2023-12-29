@@ -1,9 +1,9 @@
 ﻿namespace YogaTime.Context.Contracts.Models
 {
     /// <summary>
-    /// Сущность клиента
+    /// Сущность участника
     /// </summary>
-    public class Person: BaseAuditEntity
+    public class Person : BaseAuditEntity
     {
         /// <summary>
         /// Фамилия
@@ -30,6 +30,19 @@
         /// </summary>
         public string Phone { get; set; } = string.Empty;
 
-        public Guid  GroupId { get; set; }
+        /// <summary>
+        /// сваязь один ко многим
+        /// </summary>
+        public Guid? GroupId { get; set; }
+
+        /// <summary>
+        /// сваязь один ко многим
+        /// </summary>
+        public Group? Group { get; set; }
+
+        /// <summary>
+        /// нужна для связи один ко многим по вторичному ключу <see cref="Instructor"/>
+        /// </summary>
+        public ICollection<Instructor> Instructor { get; set; }
     }
 }

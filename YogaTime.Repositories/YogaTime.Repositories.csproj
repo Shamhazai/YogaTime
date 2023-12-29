@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\YogaTime.Common\YogaTime.Common.csproj" />
     <ProjectReference Include="..\YogaTime.Context.Contracts\YogaTime.Context.Contracts.csproj" />
+    <ProjectReference Include="..\YogaTime.Logging\YogaTime.Logging.csproj" />
     <ProjectReference Include="..\YogaTime.Repositories.Contracts\YogaTime.Repositories.Contracts.csproj" />
+    <ProjectReference Include="..\YogaTime.Shared\YogaTime.Shared.csproj" />
   </ItemGroup>
 
 </Project>

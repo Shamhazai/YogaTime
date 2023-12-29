@@ -1,9 +1,16 @@
-﻿namespace YogaTime.Context.Contracts.Models
+﻿using YogaTime.Common.Entity;
+using YogaTime.Common.Entity.EntityInterface;
+
+namespace YogaTime.Context.Contracts.Models
 {
     /// <summary>
     /// Базовый класс с аудитом
     /// </summary>
-    public abstract class BaseAuditEntity
+    public abstract class BaseAuditEntity : IEntity,
+        IEntityWithId,
+        IEntityAuditCreated,
+        IEntityAuditUpdated,
+        IEntityAuditDeleted
     {
         /// <summary>
         /// Идентификатор
