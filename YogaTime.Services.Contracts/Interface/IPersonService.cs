@@ -29,5 +29,6 @@ namespace YogaTime.Services.Contracts.Interface
         /// Удаляет существующую персону
         /// </summary>
         Task DeleteAsync(Guid id, CancellationToken cancellationToken);
+        Task<PersonModel> UpdateGroupAsync(Guid id, Guid groupId, CancellationToken cancellationToken);
     }
 }

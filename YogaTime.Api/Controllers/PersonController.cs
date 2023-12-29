@@ -83,6 +83,17 @@ namespace YogaTime.Api.Controllers
         }
 
         /// <summary>
+        /// Добавляет участника в группу по id
+        /// </summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(typeof(PersonResponse), StatusCodes.Status200OK)]
+        public async Task<IActionResult> EditGroup(Guid id, [Required] Guid groupId, CancellationToken cancellationToken)
+        {
+            var result = await personService.UpdateGroupAsync(id, groupId, cancellationToken);
+            return Ok(mapper.Map<PersonResponse>(result));
+        }
+
+        /// <summary>
         /// Удаляет имеющегося участника по id
         /// </summary>
         [HttpDelete("{id}")]

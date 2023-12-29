@@ -49,6 +49,29 @@ namespace YogaTime.Services.Implementations
             return mapper.Map<PersonModel>(item);
         }
 
+
+        async Task<PersonModel> IPersonService.UpdateGroupAsync(Guid id, Guid groupId, CancellationToken cancellationToken)
+        {
+            var targetPerson = await personReadRepository.GetByIdAsync(id, cancellationToken);
+            if (targetPerson == null)
+            {
+                throw new TimeTableEntityNotFoundException<Person>(id);
+            }
+
+            var group = await groupReadRepository.GetByIdAsync(groupId, cancellationToken);
+            if (group == null)
+            {
+                throw new TimeTableEntityNotFoundException<Group>(groupId);
+            }
+            targetPerson.GroupId = group.Id;
+            targetPerson.Group = group;
+
+            personWriteRepository.Update(targetPerson);
+            await unitOfWork.SaveChangesAsync(cancellationToken);
+            return mapper.Map<PersonModel>(targetPerson);
+        }
+
+
         async Task<PersonModel> IPersonService.AddAsync(PersonRequestModel person, CancellationToken cancellationToken)
         {
             var item = new Person

@@ -12,7 +12,7 @@ using YogaTime.Context;
 namespace YogaTime.Context.Migrations
 {
     [DbContext(typeof(TimeTableContext))]
-    [Migration("20231229153054_yoga")]
+    [Migration("20231229181258_yoga")]
     partial class yoga
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -246,9 +246,6 @@ namespace YogaTime.Context.Migrations
 
                     b.Property<Guid>("RoomId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<short>("RoomNumber")
-                        .HasColumnType("smallint");
 
                     b.Property<DateTimeOffset>("StartDate")
                         .HasColumnType("datetimeoffset");
