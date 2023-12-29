@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace YogaTime.Context.Configuration
+﻿namespace YogaTime.Context.Configuration
 {
-    internal class IContextConfigurationAnchor
+    /// <summary>
+    /// Маркерный интерфейс для сканирования сборки и регистрации всех IEntityTypeConfiguration
+    /// </summary>
+    public interface IContextConfigurationAnchor
     {
     }
 }

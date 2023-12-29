@@ -1,16 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
 namespace YogaTime.Context
 {
-
     /// <summary>
     /// Файбрика для создания контекста в DesignTime (Миграции)
     /// </summary>
-    public class SampleContextFactory : IDesignTimeDbContextFactory<YogaTimeContext>
+    public class SampleContextFactory : IDesignTimeDbContextFactory<TimeTableContext>
     {
-        public YogaTimeContext CreateDbContext(string[] args)
+        public TimeTableContext CreateDbContext(string[] args)
         {
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -18,11 +17,11 @@ namespace YogaTime.Context
                 .Build();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            var options = new DbContextOptionsBuilder<YogaTimeContext>()
+            var options = new DbContextOptionsBuilder<TimeTableContext>()
                 .UseSqlServer(connectionString)
                 .Options;
 
-            return new YogaTimeContext(options);
+            return new TimeTableContext(options);
         }
     }
 }

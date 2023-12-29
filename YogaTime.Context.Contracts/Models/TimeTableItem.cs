@@ -1,9 +1,9 @@
 ﻿namespace YogaTime.Context.Contracts.Models
 {
     /// <summary>
-    /// Сущность расписания
+    /// Элемент расписания
     /// </summary>
-    public class TimeTableItem
+    public class TimeTableItem : BaseAuditEntity
     {
         /// <summary>
         /// Дата начала
@@ -16,30 +16,44 @@
         public DateTimeOffset EndDate { get; set; }
 
         /// <summary>
-        /// Группа, в которой находятся клиенты
+        /// Идентификатор занятия
+        /// </summary>
+        public Guid YogaClassId { get; set; }
+
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public YogaClass YogaClass { get; set; }
+
+
+        public Guid RoomId { get; set; }
+
+
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public Room Room { get; set; }
+
+
+        /// <summary>
+        /// Идентификатор группы
         /// </summary>
         public Guid GroupId { get; set; }
 
-        public Group Group { get; set; } 
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public Group Group { get; set; }
 
         /// <summary>
-        /// Инструктор
+        /// Преподаватель
         /// </summary>
-        public Guid EmployeeId { get; set; }
-
-        public Employee Emploee { get; set; }
-        /// <summary>
-        /// Зал
-        /// </summary>
-        public Guid RoomId { get; set; }
-
-        public Room Room { get; set; }
+        public Guid? InstructorId { get; set; }
 
         /// <summary>
-        /// Студия
+        /// Преподаватель
         /// </summary>
-        public Guid StudioId { get; set; }
+        public Instructor? Instructor { get; set; }
 
-        public Studio Studio { get; set; }
     }
 }

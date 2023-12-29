@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using YogaTime.Context.Contracts.Models;
 
 namespace YogaTime.Context.Configuration
 {
-    internal class TimeTableItemEntityTypeConfiguration
+    public class TimeTableItemEntityTypeConfiguration : IEntityTypeConfiguration<TimeTableItem>
     {
+        public void Configure(EntityTypeBuilder<TimeTableItem> builder)
+        {
+            builder.ToTable("TimeTableItems");
+            builder.HasIdAsKey();
+            builder.PropertyAuditConfiguration();
+
+            builder.HasIndex(x => new { x.StartDate, x.EndDate })
+                .HasFilter($"{nameof(TimeTableItem.DeletedAt)} is null")
+                .HasDatabaseName($"IX_{nameof(TimeTableItem)}_{nameof(TimeTableItem.StartDate)}_{nameof(TimeTableItem.EndDate)}");
+        }
     }
 }

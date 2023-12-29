@@ -1,32 +1,38 @@
 ﻿namespace YogaTime.Context.Contracts.Models
 {
-    public class Group
+    /// <summary>
+    /// Группа
+    /// </summary>
+    public class Group : BaseAuditEntity
     {
         /// <summary>
-        /// Название
+        /// Инструктор
+        /// </summary>
+        public Guid? InstructorId { get; set; }
+
+        /// <summary>
+        /// Делаем связь один ко многим
+        /// </summary>
+        public Instructor? Instructor { get; set; }
+
+        /// <summary>
+        /// Наименование группы
         /// </summary>
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// Описание
+        /// Описание группы
         /// </summary>
-        public string? Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
         /// <summary>
-        /// нужна для связи один ко многим по вторичному ключу <see cref="TimeTableItem"/>
+        /// связь один ко многим
+        /// </summary>
+        public ICollection<Person>? Clients { get; set; }
+
+        /// <summary>
+        /// нужна для связи один ко многим
         /// </summary>
         public ICollection<TimeTableItem> TimeTableItem { get; set; }
-
-       
-
-        /// <summary>
-        /// нужна для связи один ко многим по вторичному ключу <see cref="Lesson"/>
-        /// </summary>
-        public ICollection<Lesson> Lesson { get; set; }
-
-        /// <summary>
-        /// нужна для связи один ко многим по вторичному ключу <see cref="Person"/>
-        /// </summary>
-        public ICollection<Person> Person { get; set; }
     }
 }

@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
@@ -19,8 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TimeTable203.Common.Entity\TimeTable203.Common.Entity.csproj" />
+    <ProjectReference Include="..\YogaTime.Common\YogaTime.Common.csproj" />
+    <ProjectReference Include="..\YogaTime.Context.Configuration\YogaTime.Context.Configuration.csproj" />
     <ProjectReference Include="..\YogaTime.Context.Contracts\YogaTime.Context.Contracts.csproj" />
+    <ProjectReference Include="..\YogaTime.Logging\YogaTime.Logging.csproj" />
+    <ProjectReference Include="..\YogaTime.Shared\YogaTime.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

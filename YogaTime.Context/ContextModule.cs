@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using TimeTable203.Common.Entity.InterfaceDB;
 using YogaTime.Common;
+using YogaTime.Common.Entity.InterfaceDB;
 using YogaTime.Context.Contracts;
 
 namespace YogaTime.Context
@@ -10,10 +10,10 @@ namespace YogaTime.Context
     {
         public override void CreateModule(IServiceCollection service)
         {
-            service.TryAddScoped<IYogaTimeContext>(provider => provider.GetRequiredService<YogaTimeContext>());
-            service.TryAddScoped<IDbRead>(provider => provider.GetRequiredService<YogaTimeContext>());
-            service.TryAddScoped<IDbWriter>(provider => provider.GetRequiredService<YogaTimeContext>());
-            service.TryAddScoped<IUnitOfWork>(provider => provider.GetRequiredService<YogaTimeContext>());
+            service.TryAddScoped<ITimeTableContext>(provider => provider.GetRequiredService<TimeTableContext>());
+            service.TryAddScoped<IDbRead>(provider => provider.GetRequiredService<TimeTableContext>());
+            service.TryAddScoped<IDbWriter>(provider => provider.GetRequiredService<TimeTableContext>());
+            service.TryAddScoped<IUnitOfWork>(provider => provider.GetRequiredService<TimeTableContext>());
         }
     }
 }
